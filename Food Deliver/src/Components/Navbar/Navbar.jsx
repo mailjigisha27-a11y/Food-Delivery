@@ -2,14 +2,20 @@ import { useContext, useState } from "react";
 import React from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { StoreContext } from "../../Context/StoreContext";
 
 const Navbar = ({setShowLogin}) => {
     
   const [Menu, setMenu] = useState("Menu");
 
-  const {getTotalCartAmount} = useContext(StoreContext);
+  const {getTotalCartAmount, token, user, logout} = useContext(StoreContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <div className="Navbar">
@@ -26,7 +32,19 @@ const Navbar = ({setShowLogin}) => {
            <Link to ='/cart'><img src={assets.basket_icon} alt="" /></Link>
           <div className={getTotalCartAmount() ===0 ?"":"dot"}></div>
         </div>
-      <button onClick={() => setShowLogin(true)}>Sign In</button>
+        {token && user && user.role === "admin" && (
+          <Link to='/admin' style={{ color: "#49557e", fontSize: "17px" }}>
+            Admin
+          </Link>
+        )}
+        {token && (
+          <Link to='/myorders' style={{ color: "#49557e", fontSize: "17px" }}>
+            My Orders
+          </Link>
+        )}
+        {token
+          ? <button onClick={handleLogout}>Logout</button>
+          : <button onClick={() => setShowLogin(true)}>Sign In</button>}
       </div>
     </div>
   );

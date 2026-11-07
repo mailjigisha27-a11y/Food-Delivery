@@ -1,0 +1,53 @@
+.my-orders {
+  margin: 50px 0px;
+  min-height: 50vh;
+}
+
+.my-orders h2 {
+  margin-bottom: 20px;
+}
+
+.my-orders-message {
+  color: #747474;
+}
+
+.my-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.my-orders-card {
+  border: 1px solid tomato;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #454545;
+}
+
+.my-orders-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-orders-status {
+  background-color: #ffe1e1;
+  color: tomato;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.my-orders-date {
+  color: #747474;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.my-orders-items {
+  margin: 8px 0;
+}
+
+.my-orders-total {
+  margin-top: 8px;
+}

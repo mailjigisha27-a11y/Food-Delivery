@@ -1,0 +1,120 @@
+.admin {
+  margin: 50px 0px;
+  min-height: 50vh;
+  color: #454545;
+}
+
+.admin h2 {
+  margin-bottom: 20px;
+}
+
+.admin-note {
+  color: #747474;
+}
+
+.admin-message {
+  color: green;
+  margin: 10px 0;
+}
+
+.admin-error {
+  color: tomato;
+  margin: 10px 0;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-tab {
+  border: 1px solid tomato;
+  background: white;
+  color: tomato;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.admin-tab.active {
+  background: tomato;
+  color: white;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.admin-card {
+  border: 1px solid tomato;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.admin-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-small {
+  color: #747474;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.admin-card select,
+.admin-form select,
+.admin-form input {
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  padding: 8px 10px;
+  outline-color: tomato;
+  font-size: 15px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
+}
+
+.admin-row {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-row input {
+  flex: 1;
+}
+
+.admin-form button {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-food {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-delete {
+  background: white;
+  color: tomato;
+  border: 1px solid tomato;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
