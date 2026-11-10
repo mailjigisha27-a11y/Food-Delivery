@@ -75,3 +75,4 @@ rl.question("Type your Atlas password and press Enter: ", async (password) => {
     process.exit(1);
   }
 });
+
